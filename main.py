@@ -110,5 +110,3 @@ async def handle_message(message: cl.Message):
     
     history.append({"role": "assistant", "content": result.final_output})
     cl.user_session.set("history", history)
-
-
