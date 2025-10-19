@@ -104,6 +104,7 @@ async def handle_message(message: cl.Message):
         run_config=config,
     )
 
+    
     async for event in result.stream_events():
         if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):
             await chat.stream_token(event.data.delta)
